@@ -51,3 +51,4 @@ export const GFG_URL = 'https://www.geeksforgeeks.org/profile/shraddhasah89m';
 export const SMART_WATER_URL = 'https://water-management-with-smart-tap.netlify.app/';
 export const PHONE_NUMBER = '+919810639556';
 export const DIFA_GITHUB_URL = 'https://github.com/Shraddhasajwan2004/DIFA-digital-investigator-for-android.git';
+export const RESUME_URL = 'https://drive.google.com/file/d/1QPlIPK6tHw6pe7oEsHMiM0dOgqdxc_P8/view?usp=sharing';

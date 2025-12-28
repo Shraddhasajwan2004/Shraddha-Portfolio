@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronRight, FileText, Send } from 'lucide-react';
 import { Section } from '../type';
+import { RESUME_URL } from '../constants';
 
 const Hero: React.FC = () => {
   const scrollTo = (id: string) => {
@@ -13,6 +14,10 @@ const Hero: React.FC = () => {
         behavior: 'smooth',
       });
     }
+  };
+
+  const handleResumeClick = () => {
+    window.open(RESUME_URL, '_blank');
   };
 
   return (
@@ -51,6 +56,7 @@ const Hero: React.FC = () => {
             >
               View Projects <ChevronRight size={18} />
             </motion.button>
+            
             <motion.button
               onClick={() => scrollTo(Section.Contact)}
               whileHover={{ scale: 1.05 }}
@@ -58,6 +64,15 @@ const Hero: React.FC = () => {
               className="px-6 sm:px-8 py-3.5 sm:py-4 bg-white dark:bg-slate-800 text-slate-900 dark:text-white rounded-2xl font-black text-sm sm:text-base border-2 border-slate-200 dark:border-slate-700 shadow-lg flex items-center gap-2 hover:border-violet-500 transition-all"
             >
               Hire Me <Send size={18} />
+            </motion.button>
+
+            <motion.button
+              onClick={handleResumeClick}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-6 sm:px-8 py-3.5 sm:py-4 bg-slate-900 dark:bg-slate-700 text-white rounded-2xl font-black text-sm sm:text-base shadow-lg flex items-center gap-2 hover:bg-black dark:hover:bg-slate-600 transition-all"
+            >
+              Resume <FileText size={18} />
             </motion.button>
           </div>
         </motion.div>
